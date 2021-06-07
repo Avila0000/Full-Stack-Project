@@ -1,4 +1,14 @@
 body{
     background-color: #bd7ef0;
-    /* background-image: url('/static/images/light-honeycomb.png'); */
+    background-image: url('/BioApp/static/images/tileable-wood\ \(1\).png');
+}
+.mePic{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+.usPic{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
 }
