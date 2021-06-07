@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def index(request):
     return render(request, 'index.html')
@@ -7,7 +7,7 @@ def about(request):
     return render(request, 'about.html')
 
 def memories(request):
-    pass
+    return render(request, 'memories.html')
 
 # allows user to add memory and comments
 def memoryForm(request):
