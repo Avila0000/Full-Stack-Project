@@ -14,10 +14,11 @@ def memoryForm(request):
     pass
 # if user not in session redirect to login
 
-# hidden route to add a memory picture
+# hidden route to add a memory picture and will be memory class in models
 def createMemories(request):
     pass
 
+# have a many to many field, will be the comment class in models
 def commentForm(request, memory_id):
     pass
 
@@ -25,6 +26,7 @@ def commentForm(request, memory_id):
 def createComment(request):
     pass
 
+# will be the user class in models
 def logReg(request):
     pass
 
