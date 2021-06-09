@@ -2,6 +2,12 @@ body{
     background-color: #bd7ef0;
     background-image: url('/BioApp/static/images/tileable-wood\ \(1\).png');
 }
+.navbar{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 .mePic{
     display: flex;
     justify-content: center;

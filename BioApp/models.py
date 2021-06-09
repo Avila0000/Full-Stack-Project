@@ -1,4 +1,5 @@
 from django.db import models
+import re
 
 class UserManager(models.Manager):
     def validate(self, form):
@@ -25,6 +26,7 @@ class User(models.Model):
     password = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    objects = UserManager()
 
 class Memory(models.Model):
     image = models.FileField(upload_to='documents/%Y/%m/%d')

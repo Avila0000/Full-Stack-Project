@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="memories/">Memories</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="logReg/">Login</a></li>
+            </ul>
+        </nav>
+    <h4>Login/Register</h4>
+    <form action="/hiddenLog/" method='POST'>
+        {% csrf_token %}
+        <label for="email">Email: </label><input name='email' type='text'>
+        <label>Password: </label> <input name='password' type='password'>
+        <button type="submit">Submit</button>
+    </form>
+    <form action="/hiddenReg/" method='POST'>
+    {% csrf_token %}
+    <label for="email">Email: </label><input name='email' type='text'>
+    <label for="password">Password: </label> <input name='password' type='password'>
+    <label for='confirm'>Confirm Password</label>
+    <input type='password' name='confirm' id='confirm'>
+    <label for="full_name">Full Name: </label><input name="full_name" type="text"> 
+    </label>
+    <button type="submit">Submit</button>
+    </form>
 </body>
+</html>
