@@ -19,3 +19,7 @@ body{
     align-items: center;
     align-content: center;
 }
+.pictures{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

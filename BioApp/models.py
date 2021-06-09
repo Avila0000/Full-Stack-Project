@@ -32,4 +32,4 @@ class Memory(models.Model):
 class Comment(models.Model): 
     description = models.TextField()
     comment_created = models.DateTimeField(auto_now_add=True)
-    comment_updated = models.DateTimeField(add_now=True)
+    comment_updated = models.DateTimeField(auto_now=True)
