@@ -18,10 +18,14 @@
             </ul>
         </nav>
     </div>
-    <form action="/memories/" method="POST">
+    <form action="/memories/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="img" required>
         <button>Upload</button>
-        
     </form>
+    {% for document in documents reversed %}
+    <section>
+        <img src="{{ document.docfile.url }}" alt="Img">
+    </section>
+    {% end for %}
 </body>

@@ -35,3 +35,6 @@ class Comment(models.Model):
     description = models.TextField()
     comment_created = models.DateTimeField(auto_now_add=True)
     comment_updated = models.DateTimeField(auto_now=True)
+
+class Document(models.Model):
+    docfile = models.FileField(upload_to='memories/%Y/%m/%d')

@@ -26,7 +26,7 @@ def createMemories(request):
             docfile=request.FILES['docfile'],
         )
         newdoc.save()
-        return HttpResponseRedirect('/memories')
+        return HttpResponseRedirect('/memories/')
     context = {
         'documents': Document.objects.all()
     }
