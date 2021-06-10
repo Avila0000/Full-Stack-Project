@@ -1,10 +1,16 @@
 body{
     background-color: #bd7ef0;
     background-image: url('/BioApp/static/images/tileable-wood\ \(1\).png');
+    padding: 50px;
+    margin: 5px;
+}
+h4{
+    padding: 10px;
 }
 .navbar{
     text-decoration: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
 }

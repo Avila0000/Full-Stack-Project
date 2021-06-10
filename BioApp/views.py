@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 import bcrypt
 from .models import *
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 def index(request):
     return render(request, 'index.html')
@@ -20,7 +21,16 @@ def memoryForm(request):
 
 # hidden route to add a memory picture and will be memory class in models
 def createMemories(request):
-    pass
+    if request.method == 'POST':
+        newdoc = Document(
+            docfile=request.FILES['docfile'],
+        )
+        newdoc.save()
+        return HttpResponseRedirect('/memories')
+    context = {
+        'documents': Document.objects.all()
+    }
+    return render(request, 'memories.html', context)
 
 # have a many to many field, will be the comment class in models
 def commentForm(request, memory_id):

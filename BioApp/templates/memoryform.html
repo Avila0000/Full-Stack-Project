@@ -18,4 +18,10 @@
             </ul>
         </nav>
     </div>
+    <form action="/memories/" method="POST">
+        {% csrf_token %}
+        <input type="file" name="img" required>
+        <button>Upload</button>
+        
+    </form>
 </body>
