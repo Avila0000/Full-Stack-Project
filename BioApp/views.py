@@ -11,7 +11,11 @@ def about(request):
     return render(request, 'about.html')
 
 def memories(request):
-    return render(request, 'memories.html')
+    context ={
+    'documents': Document.objects.all()
+    }
+    return render(request, 'memories.html', context)
+
 
 # allows user to add memory and comments
 def memoryForm(request):
@@ -27,10 +31,7 @@ def createMemories(request):
         )
         newdoc.save()
         return HttpResponseRedirect('/memories/')
-    context = {
-        'documents': Document.objects.all()
-    }
-    return render(request, 'memories.html', context)
+
 
 # have a many to many field, will be the comment class in models
 def commentForm(request, memory_id):

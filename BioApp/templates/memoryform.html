@@ -20,7 +20,7 @@
     </div>
     <form action="/memories/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="img" required>
+        <input type="file" name="docfile" required>
         <button>Upload</button>
     </form>
     {% for document in documents reversed %}

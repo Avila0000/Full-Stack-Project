@@ -35,3 +35,6 @@ h4{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+section.img{
+    max-width: 200px;
+}
