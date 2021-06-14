@@ -25,7 +25,7 @@
         <button type="submit">Submit</button>
     </form>
     <h4>Register</h4>
-    <form action="/hiddenReg/" method='POST'>
+    <form action="/hiddenReg/" method='POST' class="form">
     {% csrf_token %}
     <label for="email">Email: </label><input name='email' type='text'>
     <label for="password">Password: </label> <input name='password' type='password'>

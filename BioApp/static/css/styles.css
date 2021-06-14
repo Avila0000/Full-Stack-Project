@@ -4,15 +4,17 @@ body{
     padding: 50px;
     margin: 5px;
 }
-h4{
-    padding: 10px;
-}
 .navbar{
     text-decoration: none;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-content: center;
+}
+h4{
+    padding: 10px;
+}
+ul *{
+    text-decoration: none;
+    display: flex;
 }
 .mePic{
     display: flex;
@@ -32,8 +34,9 @@ h4{
     align-content: center;
 }
 .pictures{
-    flex-wrap: wrap;
-    justify-content: space-around;
+display: inline;
+justify-content: center;
+align-items: center;
 }
 section.img{
     max-width: 200px;
